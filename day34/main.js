@@ -1,66 +1,25 @@
-function validation(){
-    var name =document.getElementById("name");
-    var valid_name_regex = /^[A-Za-z]+$/;
+// function printName(){
+//     document.write("john");
+//     document.write("<br>");
+//     setTimeout(function() { document.write("anna")}, 3000);
+//     document.write("hans");
+// }
 
-var age = document.getElementById("age");
+// printName();
 
-var valid_age_regex = /^[0-9]+$/;
+var colors=["red", "green","blue","purple"];
 
-var city = document.getElementById("city");
-
-    
-   // if(valid_name_regex(name)){
-   //     return true;
-   
-   // }else{
-   
-   // document.getElementById("name_error").style.visibility="visible";
-   // document.getElementById("name").style.borderColor="red";
-   // return false;
-   
-
-   //}
-   if(!(name.match(valid_namee_regex))|| !(age.match(valid_age_regex))|| (city="")){
-        if(!(name.match(valid_name_regex))){
-             document.getElementById("name_error").style.visibility="visible";
-             document.getElementById("name").style.borderColor="red";
-        }
-         else{
-             document.getElementById("name_error").style.visibility="hidden";
-             document.getElementById("name").style.borderColor="black"; 
-        }
-        if(!(age.match(valid_age_regex))){
-            document.getElementById("age_error").style.visibility="visible";
-            document.getElementById("age").style.borderColor="red";
-       }
-        else{
-            document.getElementById("age_error").style.visibility="hidden";
-            document.getElementById("age").style.borderColor="black"; 
-       }
-       if(city == ""){
-        document.getElementById("city_error").style.visibility="visible";
-        document.getElementById("city").style.borderColor="red"; 
-       } else{
-        document.getElementById("city_error").style.visibility="hidden";
-        document.getElementById("city").style.borderColor="black"; 
-   }
-
-
-            return false;
-        }else{ 
-             document.getElementById("name_error").style.visibility="hidden";
-             document.getElementById("name").style.borderColor="black"; 
-             document.getElementById("age_error").style.visibility="hidden";
-             document.getElementById("age").style.borderColor="black"; 
-             document.getElementById("city_error").style.visibility="hidden";
-             document.getElementById("city").style.borderColor="black"; 
-             return true;
-
-    }
-
-
-
-
+function changebg(){
+    document.querySelector('body').style.background =
+    color[Math.floor(Math.random()*colors.length)];
 }
 
 
+var names=["rita", "jona","joni","bleart"];
+
+function changename(){
+    document.querySelector('p').innerHTML =
+    names[Math.floor(Math.random()*names.length)];
+}
+setInterval(changebg,1000);
+setInterval(changename,1000);

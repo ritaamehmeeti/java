@@ -1,12 +1,8 @@
-#name_error{
-    visibility: hidden;
-    color: red;
+p{
+    color: white;
+    font-size: 30;
+    font-weight: bold;
 }
-#age_error{
-    visibility: hidden;
-    color: red;
-}
-#citye_error{
-    visibility: hidden;
-    color: red;
+body{
+    background: blue;
 }
