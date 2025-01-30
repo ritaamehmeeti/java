@@ -1,26 +1,26 @@
 var slideIndex = 1;
 
-function showslides(){
+function showslides(n){
     var i;
-    var slide =document.getElementsByClassName("slide");
+    var slides =document.getElementsByClassName("slide");
 
-    for (i= 0; i< slide.length; i++) {
+    for (i= 0; i< slides.length; i++) {
         slides[i].style.display="none";
     }
     if(n>slides.length){
         slideIndex=1;
     }
     if(n<1){
-        slideIndex=slide.length;
+        slideIndex=slides.length;
     }
-    slide[slideIndex-1].style.display="none";
+    slides[slideIndex-1].style.display="block";
 }
 
 showslides(1)
 
 function plusSlides(n){
     slideIndex += n;
-    showslides(1);
+    showslides(slideIndex);
 }
 
 setInterval(plusSlides, 3000,1);
